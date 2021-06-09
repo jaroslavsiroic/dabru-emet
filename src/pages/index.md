@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Test app here made with netlify
-image: https://cdn.pixabay.com/photo/2018/01/20/07/19/tallest-3093955_1280.jpg
+image: /img/products-full-width.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
