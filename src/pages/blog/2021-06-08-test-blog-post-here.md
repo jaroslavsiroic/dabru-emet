@@ -7,7 +7,7 @@ description: Not only can your daily cup of joe help you feel more energized,
   several conditions, such as type 2 diabetes, cancer and Alzheimer's and
   Parkinson's disease. In fact, coffee may even boost longevity
 featuredpost: true
-featuredimage: https://cdn.pixabay.com/photo/2014/02/25/22/06/staircase-274614_1280.jpg
+featuredimage: /img/products-grid2.jpg
 tags:
   - health
   - why_coffee
