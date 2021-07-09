@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
-title: Nazwa fundacji tutaj
-image: /img/ploesti-banner.jpeg
+title: Mówcie PRAWDĘ
+image: /img/wwii.jpeg
 heading: Nagłówek opisu fundacji
 subheading: Tekst pod nazwą fundacji
 mainpitch:
