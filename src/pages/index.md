@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Mówcie PRAWDĘ
-image: /img/background.png
+image: /img/dabru_background.png
 heading: Nagłówek opisu fundacji
 subheading: Tekst pod nazwą fundacji
 mainpitch:
