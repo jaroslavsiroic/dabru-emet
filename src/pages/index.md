@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Mówcie PRAWDĘ
-image: /img/wwii.jpeg
+image: /img/background.png
 heading: Nagłówek opisu fundacji
 subheading: Tekst pod nazwą fundacji
 mainpitch:
