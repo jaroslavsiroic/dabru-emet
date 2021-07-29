@@ -33,10 +33,10 @@ export const IndexPageTemplate = ({
           flexDirection: 'column',
         }}
       >
-        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen main-heading-container">
+        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen main-heading-text">
           {title}
         </h1>
-        <h3 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen main-heading-container">
+        <h3 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-2-widescreen main-heading-text">
           {subheading}
         </h3>
       </div>
