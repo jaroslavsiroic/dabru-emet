@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Dabru Emet
-image: /img/background_one.png
+title: Centrum Edukacyjno Kulturalne
+image: /img/background.png
 heading: Nagłówek opisu fundacji
-subheading: CENTRUM EDUKACYJNO - KULTURALNE
+subheading: Dabru Emet  - Mówcie Prawdę
 mainpitch:
   title: Nasza misja
   description: >
