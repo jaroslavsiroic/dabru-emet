@@ -26,17 +26,17 @@ export const IndexPageTemplate = ({
       <div
         style={{
           display: 'flex',
-          height: '150px',
+          marginTop: '5em',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'center',
           flexDirection: 'column',
         }}
       >
-        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen main-heading-text">
+        <h1 className="has-text-weight-bold is-size-5-mobile is-size-4-tablet is-size-3-widescreen sasi-xuj main-heading-text">
           {title}
         </h1>
-        <h3 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-2-widescreen main-heading-text">
+        <h3 className="has-text-weight-bold is-size-5-mobile is-size-4-tablet is-size-3-widescreen main-heading-text">
           {subheading}
         </h3>
       </div>

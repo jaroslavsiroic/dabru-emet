@@ -35,14 +35,22 @@
 
 .full-width-image
   width: 100vw
-  height: 50vh
+  height: 500px
   display: flex
   justify-content: center
-  align-items: center
+  align-items: flex-start
   background-size: contain
   background-position: bottom
   background-attachment: local
   background-repeat: no-repeat
+  @media ( max-width: 568px)
+    height: 100px
+  @media ( max-width: 768px)
+    height: 200px
+  @media ( max-width: 968px)
+    height: 300px
+  @media ( max-width: 1023px)
+    height: 400px
 
 .main-heading-text
   background-color: rgba($white, .75)
@@ -70,6 +78,9 @@
 
 .margin-top-0
   margin-top: 0 !important
+
+.margin-top-main-image
+  margin-top: 10em
 
 .navbar-item .icon
   color: $primary
