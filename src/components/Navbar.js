@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
+import british from '../img/GB.svg'
+import polish from '../img/PL.svg'
 import logo from '../img/logo.svg'
 
 const Navbar = class extends React.Component {
@@ -32,6 +34,10 @@ const Navbar = class extends React.Component {
     )
   }
 
+  onFlagClick = () => {
+
+  }
+
   render() {
     return (
       <nav
@@ -50,8 +56,8 @@ const Navbar = class extends React.Component {
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
               style={{
-                width: '5em',
-                height: '5em'
+                width: '4em',
+                height: '4em'
               }}
             >
               <span />
@@ -87,8 +93,18 @@ const Navbar = class extends React.Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="icon">
-                  <img src={github} alt="Github" />
+                <span className="icon" onClick={this.onFlagClick}>
+                  <img className="lang-icon-border" src={british} alt="Change Language" />
+                </span>
+              </a>
+              <a
+                className="navbar-item"
+                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon" onClick={this.onFlagClick}>
+                  <img className="lang-icon-border" src={polish} alt="Change Language" />
                 </span>
               </a>
             </div>
