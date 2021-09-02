@@ -33,10 +33,10 @@ export const IndexPageTemplate = ({
           flexDirection: 'column',
         }}
       >
-        <h1 className="has-text-weight-bold is-size-5-mobile is-size-4-tablet is-size-3-widescreen sasi-xuj main-heading-text">
+        <h1 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text">
           {title}
         </h1>
-        <h3 className="has-text-weight-bold is-size-5-mobile is-size-4-tablet is-size-3-widescreen main-heading-text">
+        <h3 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text">
           {subheading}
         </h3>
       </div>
@@ -64,14 +64,14 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
                 <Features gridItems={intro.blurbs} />
-                <div className="columns">
+                {/* <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
                       Zobacz więcej produktów
                     </Link>
                   </div>
-                </div>
-                <div className="column is-12">
+                </div> */}
+                {/* <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
                     Najnowsze historie
                   </h3>
@@ -81,7 +81,7 @@ export const IndexPageTemplate = ({
                       Zobacz więcej
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
