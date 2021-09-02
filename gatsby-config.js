@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Dabru Emet',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Centrum Edukacyjno - Kulturalne „Dabru Emet - Mówcie Prawdę” powstało przy Gminie Wyznaniowej Starozakonnych w Rzeczypospolitej Polskiej. Centrum prowadzi działalność edukacyjną i kulturalną, dotyczącą dziedzictwa i historii Gmin Reformowanych, jak też historii Gmin Żydowskich mających wielowiekową tradycję mojżeszową w RP.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
