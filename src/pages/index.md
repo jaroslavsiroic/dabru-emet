@@ -2,66 +2,44 @@
 templateKey: index-page
 title: Centrum Edukacyjno Kulturalne
 image: /img/background.png
-heading: Nagłówek opisu fundacji
+heading: Mówmy Prawdę
 subheading: Dabru Emet  - Mówcie Prawdę
 mainpitch:
-  title: Nasza misja
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  title: .
+  description: .
+description: Centrum Edukacyjno - Kulturalne „Dabru Emet - Mówcie Prawdę”
+  powstało przy Gminie Wyznaniowej Starozakonnych w Rzeczypospolitej Polskiej.
+  Centrum prowadzi działalność edukacyjną i kulturalną dotyczącą dziedzictwa i
+  historii Gmin Reformowanych, jak też historii Gmin Żydowskich mających
+  wielowiekową tradycję mojżeszową w RP. Zamierzamy prowadzić działalność
+  naukową, naukowo-dydaktyczną i kulturalną oraz organizować działalność o
+  charakterze informacyjnym służącym upowszechnianiu kultury żydowskiej. Centrum
+  będzie otwarte na współpracę i dialog w dziedzinie religijnej z
+  przedstawicielami innych wyznań przy zachowaniu własnej tożsamości. Centrum
+  będzie także zajmować się wydawaniem książek, gazet i periodyków oraz
+  prowadzić działalność poprzez własną stronę internetową. Czując się
+  odpowiedzialnymi za przeszłość duchową i materialną spuścizny i kultury
+  żydowskiej na terenie RP, będziemy opisywać i publikować przypadki
+  nieodtwarzalnych dewastacji i niszczenia materialnych pamiątek i majątków
+  żydowskich, cudem ocalałych z pożogi II wojny światowej. To zniszczenie
+  Dziedzictwa Żydów Polskich stało się po przejęciu przez Związek Gmin
+  Wyznaniowych Żydowskich w RP na mocy ustawy z 20 lutego 1997 roku.
 intro:
   blurbs:
-    - image: /img/sovietwwii.jpeg
-      text: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    - image: /img/sovietwwii.jpeg
-      text: >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. 
-    - image: /img/sovietwwii.jpeg
-      text: >
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    - image: /img/ploesti-banner.jpeg
-      text: >
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur.
-  heading: Nasza oferta
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum.
+    - image: /img/favicon.png
+      text: icon
+  heading: .
+  description: .
 main:
-  heading: Opis dalszy
-  description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  heading: .
+  description: .
   image1:
-    alt: Czołgi
-    image: /img/germany_poland_september_1_1939.jpeg
+    alt: icon
+    image: /img/favicon.png
   image2:
-    alt: Samoloty
-    image: /img/ploesti-banner.jpeg
+    alt: icon
+    image: /img/favicon.png
   image3:
-    alt: Ghetto
-    image: /img/ghetto-67736_1280.jpg
+    alt: icon
+    image: /img/favicon.png
 ---
