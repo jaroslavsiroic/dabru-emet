@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import BlogRoll from "../components/BlogRoll";
 
 export const IndexPageTemplate = ({
   image,
@@ -19,18 +19,19 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
       }}
     >
       <div
         style={{
-          display: 'flex',
-          marginTop: '5em',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          flexDirection: 'column',
+          display: "flex",
+          marginTop: "5em",
+          lineHeight: "1",
+          justifyContent: "space-around",
+          alignItems: "center",
+          flexDirection: "column",
         }}
       >
         <h1 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text">
@@ -60,9 +61,13 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       {heading}
                     </h3>
-                    <p style={{
-                      textAlign: 'justify'
-                    }}>{description}</p>
+                    <p
+                      style={{
+                        textAlign: "justify",
+                      }}
+                    >
+                      {description}
+                    </p>
                   </div>
                 </div>
                 {/* <Features gridItems={intro.blurbs} /> */}
@@ -73,7 +78,7 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div> */}
-                {/* <div className="column is-12">
+                <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
                     Najnowsze historie
                   </h3>
@@ -83,7 +88,7 @@ export const IndexPageTemplate = ({
                       Zobacz więcej
                     </Link>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
@@ -91,7 +96,7 @@ export const IndexPageTemplate = ({
       </div>
     </section>
   </div>
-)
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -103,10 +108,10 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-}
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -120,8 +125,8 @@ const IndexPage = ({ data }) => {
         intro={frontmatter.intro}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -129,9 +134,9 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -169,4 +174,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

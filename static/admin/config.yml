@@ -23,7 +23,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "blog-post"
+          default: "blog-post",
         }
       - { label: "Tytuł", name: "title", widget: "string" }
       - { label: "Data publikacji", name: "date", widget: "datetime" }
@@ -44,7 +44,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "index-page"
+              default: "index-page",
             }
           - { label: Tytuł, name: title, widget: string }
           - { label: Obraz, name: image, widget: image }
@@ -57,10 +57,10 @@ collections:
               fields:
                 [
                   { label: Tytuł, name: title, widget: string },
-                  { label: Opis, name: description, widget: text }
-                ]
+                  { label: Opis, name: description, widget: text },
+                ],
             }
-          - { label: Opis, name: description, widget: string }
+          - { label: Opis, name: description, widget: markdown }
           - {
               label: Wprowadzenie,
               name: intro,
@@ -76,10 +76,10 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text }
-                      ]
-                  }
-                ]
+                        { label: Text, name: text, widget: text },
+                      ],
+                  },
+                ],
             }
           - {
               label: Main,
@@ -96,8 +96,8 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string }
-                      ]
+                        { label: Alt, name: alt, widget: string },
+                      ],
                   },
                   {
                     label: Image2,
@@ -106,8 +106,8 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string }
-                      ]
+                        { label: Alt, name: alt, widget: string },
+                      ],
                   },
                   {
                     label: Image3,
@@ -116,10 +116,10 @@ collections:
                     fields:
                       [
                         { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string }
-                      ]
-                  }
-                ]
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                ],
             }
       - file: "src/pages/about/index.md"
         label: "O nas"
@@ -129,7 +129,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "about-page"
+              default: "about-page",
             }
           - { label: "Tytuł", name: "title", widget: "string" }
           - { label: "Korpus", name: "body", widget: "markdown" }
@@ -141,7 +141,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "about-page"
+              default: "about-page",
             }
           - { label: "Tytuł", name: "title", widget: "string" }
           - { label: "Korpus", name: "body", widget: "markdown" }
