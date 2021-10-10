@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReactMapGL from 'react-map-gl';
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
@@ -6,7 +7,13 @@ import Content, { HTMLContent } from '../components/Content'
 
 export const ContactPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
-
+  const [viewport, setViewport] = useState({
+    width: '100%',
+    height: 400,
+    latitude: 52.243824373310794,
+    longitude: 20.97462346950742,
+    zoom: 13
+  });
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -18,6 +25,11 @@ export const ContactPageTemplate = ({ title, content, contentComponent }) => {
               </h2>
               <PageContent className="content" content={content} />
             </div>
+            <ReactMapGL
+              {...viewport}
+              mapboxApiAccessToken={process.env.GATSBY_MAPBOX_TOKEN}
+              onViewportChange={nextViewport => setViewport(nextViewport)}
+            />
           </div>
         </div>
       </div>
