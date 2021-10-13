@@ -9418,6 +9418,11 @@ gatsby-page-utils@^0.2.20:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-babel-exclude@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-babel-exclude/-/gatsby-plugin-babel-exclude-1.0.2.tgz#a40b12239d7646d539605113b5419500d16efe31"
+  integrity sha512-tT+KUAUrGBJUk0P0Osl7rg5iesGTJPyvS4WXIX8ouv1KjZA+8L/f5TX7PqTbt+aPHSo9CBcuHGFwoQ9E8OBnsQ==
+
 gatsby-plugin-netlify-cms@^4.2.5:
   version "4.3.11"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.3.11.tgz#c576d9a293b83e6dccc17c0f1f55c99582be8aa8"

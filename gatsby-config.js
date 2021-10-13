@@ -76,6 +76,12 @@ module.exports = {
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
+    {
+      resolve: "gatsby-plugin-babel-exclude",
+      options: {
+        exclude: /react-map-gl/,
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
