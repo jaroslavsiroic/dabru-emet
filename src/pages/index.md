@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Centrum Edukacyjno Kulturalne
 image: /img/background.png
-heading: Mówmy Prawdę
+heading: Mówcie Prawdę
 subheading: Dabru Emet  - Mówcie Prawdę
 mainpitch:
   title: .
