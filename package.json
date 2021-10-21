@@ -5,10 +5,8 @@
   "author": "Jaroslav Siroic",
   "dependencies": {
     "bulma": "^0.9.3",
-    "dotenv": "^10.0.0",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
-    "gatsby-plugin-babel-exclude": "^1.0.2",
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.2.5",
     "gatsby-plugin-purgecss": "^5.0.0",
@@ -31,7 +29,6 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
-    "react-map-gl": "^6.1.17",
     "uuid": "^7.0.0"
   },
   "keywords": [
@@ -44,7 +41,6 @@
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
-    "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
