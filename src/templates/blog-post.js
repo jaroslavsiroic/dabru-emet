@@ -7,6 +7,8 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import { FacebookProvider, Comments } from 'react-facebook';
 
+const isBrowser = () => typeof window !== "undefined";
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -43,7 +45,7 @@ export const BlogPostTemplate = ({
               </div>
             ) : null}
             <FacebookProvider appId="297707888605205">
-              <Comments href={window.location.href} />
+              <Comments href={isBrowser() && window.location.href} />
             </FacebookProvider>
           </div>
         </div>
