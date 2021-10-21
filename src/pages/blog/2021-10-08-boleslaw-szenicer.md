@@ -3,7 +3,6 @@ templateKey: blog-post
 title: boleslaw Szenicer
 date: 2021-10-08T13:29:57.455Z
 description: "wariat wzial sie doroboty "
-featuredpost: false
 featuredimage: /img/blog-index.jpg
 tags:
   - jeden

@@ -29,7 +29,6 @@ collections:
       - { label: "Tytuł", name: "title", widget: "string" }
       - { label: "Data publikacji", name: "date", widget: "datetime" }
       - { label: "Opis", name: "description", widget: "text" }
-      - { label: "Prezentowany wpis", name: "featuredpost", widget: "boolean" }
       - { label: "Przedstawiony obraz", name: "featuredimage", widget: image }
       - { label: "Korpus", name: "body", widget: "markdown" }
       - { label: "Tagi", name: "tags", widget: "list" }

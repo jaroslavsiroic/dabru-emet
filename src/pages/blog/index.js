@@ -8,22 +8,27 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <div
-          className="full-width-image-container margin-top-0"
+          className="full-width-image"
           style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
+            backgroundImage: `url('/img/background.png')`,
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-1"
+          <div
             style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
+              display: "flex",
+              marginTop: "5em",
+              lineHeight: "1",
+              justifyContent: "space-around",
+              alignItems: "center",
+              flexDirection: "column",
             }}
           >
-            Najnowsze historie
-          </h1>
+            <h1
+              className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text"
+            >
+              Historie na naszym blogu
+            </h1>
+          </div>
         </div>
         <section className="section">
           <div className="container">

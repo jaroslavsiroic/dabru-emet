@@ -4,7 +4,6 @@ title: Żyd, Polak, żołnierz, leśnik
 date: 2021-10-08T13:03:10.786Z
 description: Dany artykuł opisuje życiorys znamienytej Polskiej rodziny Berka i
   Joselewicza. Przekazany przez członka naszego Centrum, Jacka Frankowskiego
-featuredpost: true
 featuredimage: /img/products-grid3.jpg
 tags:
   - Polak

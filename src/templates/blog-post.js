@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import { FacebookProvider, Comments } from 'react-facebook';
 
 export const BlogPostTemplate = ({
   content,
@@ -31,7 +32,7 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
+                <h4>Tagi</h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
@@ -41,6 +42,9 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
+            <FacebookProvider appId="297707888605205">
+              <Comments href={window.location.href} />
+            </FacebookProvider>
           </div>
         </div>
       </div>

@@ -74,9 +74,10 @@ const Navbar = class extends React.Component {
                 {/* <Link className="navbar-item" to="/about">
                   O nas
                 </Link>
+                */}
                 <Link className="navbar-item" to="/blog">
                   Blog
-                </Link> */}
+                </Link>
                 <Link className="navbar-item" to="/contact">
                   Kontakt
                 </Link>
@@ -101,8 +102,8 @@ const Navbar = class extends React.Component {
                 <span className="icon" onClick={this.onFlagClick}>
                   <img className="lang-icon-border" src={polish} alt="Change Language" />
                 </span>
-              </a>
-            */}
+              </a> */}
+
             </div>
           </div>
         </div>
