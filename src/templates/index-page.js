@@ -5,6 +5,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import { HTMLContent } from "../components/Content";
 
 export const IndexPageTemplate = ({
   image,
@@ -19,9 +20,8 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
       }}
     >
       <div
@@ -66,7 +66,7 @@ export const IndexPageTemplate = ({
                         textAlign: "justify",
                       }}
                     >
-                      {description}
+                      <HTMLContent content={description} />
                     </p>
                   </div>
                 </div>

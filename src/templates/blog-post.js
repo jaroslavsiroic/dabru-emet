@@ -45,7 +45,7 @@ export const BlogPostTemplate = ({
               </div>
             ) : null}
             <FacebookProvider appId="297707888605205">
-              <Comments href={isBrowser() && window.location.href} />
+              <Comments style={{ width: "100%" }} href={isBrowser() && window.location.href} />
             </FacebookProvider>
           </div>
         </div>
@@ -65,7 +65,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(post);
   return (
     <Layout>
       <BlogPostTemplate
