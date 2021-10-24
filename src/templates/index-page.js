@@ -13,15 +13,16 @@ export const IndexPageTemplate = ({
   heading,
   subheading,
   mainpitch,
-  description,
+  html,
   intro,
 }) => (
   <div>
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
       }}
     >
       <div
@@ -66,7 +67,7 @@ export const IndexPageTemplate = ({
                         textAlign: "justify",
                       }}
                     >
-                      <HTMLContent content={description} />
+                      <HTMLContent content={html} />
                     </p>
                   </div>
                 </div>
@@ -80,7 +81,7 @@ export const IndexPageTemplate = ({
                 </div> */}
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Najnowsze historie
+                    Najnowsze historie na blogu
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
@@ -111,7 +112,7 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout>
@@ -121,7 +122,7 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
+        html={html}
         intro={frontmatter.intro}
       />
     </Layout>
@@ -141,6 +142,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         title
         image {
@@ -156,7 +158,6 @@ export const pageQuery = graphql`
           title
           description
         }
-        description
         intro {
           blurbs {
             image {

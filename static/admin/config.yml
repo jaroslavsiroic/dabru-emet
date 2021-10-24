@@ -31,7 +31,7 @@ collections:
       - { label: "Opis", name: "description", widget: "text" }
       - { label: "Przedstawiony obraz", name: "featuredimage", widget: image }
       - { label: "Korpus", name: "body", widget: "markdown" }
-      - { label: "Tagi", name: "tags", widget: "list" }
+      - { label: "Tagi", name: "tags", widget: "list", required: true }
 
   - name: "pages"
     label: "Strony"

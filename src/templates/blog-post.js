@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import { FacebookProvider, Comments } from 'react-facebook';
+import { FacebookProvider, Comments } from "react-facebook";
 
 const isBrowser = () => typeof window !== "undefined";
 
@@ -44,9 +44,9 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-            <FacebookProvider appId="297707888605205">
+            {/* <FacebookProvider appId="297707888605205">
               <Comments style={{ width: "100%" }} href={isBrowser() && window.location.href} />
-            </FacebookProvider>
+            </FacebookProvider> */}
           </div>
         </div>
       </div>

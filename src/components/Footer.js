@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
 
-import logo from '../img/logocard.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+import logo from "../img/logocard.svg";
+import facebook from "../img/social/facebook.svg";
+import instagram from "../img/social/instagram.svg";
+import twitter from "../img/social/twitter.svg";
+import vimeo from "../img/social/vimeo.svg";
 
 const Footer = class extends React.Component {
   render() {
@@ -15,12 +15,12 @@ const Footer = class extends React.Component {
           <img
             src={logo}
             alt="Dabru Emet"
-            style={{ width: '24em', height: '20em' }}
+            style={{ width: "24em", height: "20em" }}
           />
         </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
+            <div style={{ maxWidth: "100vw" }} className="columns">
               <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
@@ -50,11 +50,11 @@ const Footer = class extends React.Component {
               <div className="column is-4">
                 <section>
                   <ul className="menu-list">
-                    {/* <li>
+                    <li>
                       <Link className="navbar-item" to="/blog">
-                        Najnowsze historie
+                        Historie na blogu
                       </Link>
-                    </li> */}
+                    </li>
                     <li>
                       <Link className="navbar-item" to="/contact">
                         Kontakt
@@ -68,7 +68,7 @@ const Footer = class extends React.Component {
                   <img
                     src={facebook}
                     alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
+                    style={{ width: "1em", height: "1em" }}
                   />
                 </a>
               </div>
@@ -76,8 +76,8 @@ const Footer = class extends React.Component {
           </div>
         </div>
       </footer>
-    )
+    );
   }
-}
+};
 
-export default Footer
+export default Footer;
