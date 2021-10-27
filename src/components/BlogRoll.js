@@ -1,21 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql, StaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
-              <article
-                className='blog-list-item tile is-child box notification'
-              >
+              <article className="blog-list-item tile is-child box notification">
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
@@ -52,7 +50,7 @@ class BlogRoll extends React.Component {
             </div>
           ))}
       </div>
-    )
+    );
   }
 }
 
@@ -62,12 +60,12 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
+};
 
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query BlogRollQuery($language: String!) {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
@@ -82,7 +80,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(locale: "PL", formatString: "MMMM DD, YYYY")
+                date(locale: $language, formatString: "MMMM DD, YYYY")
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
@@ -98,4 +96,4 @@ export default () => (
     `}
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
-)
+);

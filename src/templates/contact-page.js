@@ -1,11 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 export const ContactPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+  const PageContent = contentComponent || Content;
 
   return (
     <section className="section section--gradient">
@@ -14,7 +15,7 @@ export const ContactPageTemplate = ({ title, content, contentComponent }) => {
           <div className="column is-10 is-offset-1">
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
+                <Trans>Contacts</Trans>
               </h2>
               <PageContent className="content" content={content} />
             </div>
@@ -22,17 +23,17 @@ export const ContactPageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 ContactPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-}
+};
 
 const ContactPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -42,17 +43,26 @@ const ContactPage = ({ data }) => {
         content={post.html}
       />
     </Layout>
-  )
-}
+  );
+};
 
 ContactPage.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
-export default ContactPage
+export default ContactPage;
 
 export const ContactPageQuery = graphql`
-  query contactPage($id: String!) {
+  query contactPage($id: String!, $language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -60,4 +70,4 @@ export const ContactPageQuery = graphql`
       }
     }
   }
-`
+`;

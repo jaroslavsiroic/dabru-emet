@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -15,41 +16,44 @@ export const IndexPageTemplate = ({
   mainpitch,
   html,
   intro,
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
+}) => {
+  const { t } = useTranslation();
+  console.log(t("Home"));
+  return (
+    <div>
       <div
+        className="full-width-image margin-top-0"
         style={{
-          display: "flex",
-          marginTop: "5em",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "center",
-          flexDirection: "column",
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         }}
       >
-        <h1 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text">
-          {title}
-        </h1>
-        <h3 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text">
-          {subheading}
-        </h3>
+        <div
+          style={{
+            display: "flex",
+            marginTop: "5em",
+            lineHeight: "1",
+            justifyContent: "space-around",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <h1 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text">
+            <Trans>Home title</Trans>
+          </h1>
+          <h3 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text">
+            <Trans>Home subtitle</Trans>
+          </h3>
+        </div>
       </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                {/* <div className="content">
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <div className="content">
+                  {/* <div className="content">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
@@ -57,47 +61,48 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div> */}
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p
-                      style={{
-                        textAlign: "justify",
-                      }}
-                    >
-                      <HTMLContent content={html} />
-                    </p>
+                  <div className="columns">
+                    <div className="column is-12">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        {heading}
+                      </h3>
+                      <p
+                        style={{
+                          textAlign: "justify",
+                        }}
+                      >
+                        <HTMLContent content={t("Home description")} />
+                      </p>
+                    </div>
                   </div>
-                </div>
-                {/* <Features gridItems={intro.blurbs} /> */}
-                {/* <div className="columns">
+                  {/* <Features gridItems={intro.blurbs} /> */}
+                  {/* <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
                       Zobacz więcej produktów
                     </Link>
                   </div>
                 </div> */}
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Najnowsze historie na blogu
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Zobacz więcej
-                    </Link>
+                  <div className="column is-12">
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      Najnowsze historie na blogu
+                    </h3>
+                    <BlogRoll />
+                    <div className="column is-12 has-text-centered">
+                      <Link className="btn" to="/blog">
+                        Zobacz więcej
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
+    </div>
+  );
+};
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -140,7 +145,16 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
+  query IndexPageTemplate($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       html
       frontmatter {
