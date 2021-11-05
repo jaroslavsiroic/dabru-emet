@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
+import { Trans } from "gatsby-plugin-react-i18next";
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -26,7 +27,7 @@ export default class BlogIndexPage extends React.Component {
             <h1
               className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text"
             >
-              Historie na naszym blogu
+              <Trans>Blog stories</Trans>
             </h1>
           </div>
         </div>
@@ -41,3 +42,17 @@ export default class BlogIndexPage extends React.Component {
     )
   }
 }
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import { Link, Trans } from "gatsby-plugin-react-i18next";
 
 class BlogRoll extends React.Component {
   render() {
@@ -43,7 +44,7 @@ class BlogRoll extends React.Component {
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
-                    Czytaj dalej →
+                    <Trans>Read more</Trans> →
                   </Link>
                 </p>
               </article>
@@ -65,7 +66,7 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery($language: String!) {
+      query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
@@ -80,7 +81,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(locale: $language, formatString: "MMMM DD, YYYY")
+                date(formatString: "YYYY-MM-DD")
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
