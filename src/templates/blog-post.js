@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import { FacebookProvider, Comments } from "react-facebook";
+import { Link } from "gatsby-plugin-react-i18next";
 
 const isBrowser = () => typeof window !== "undefined";
 
@@ -97,7 +98,16 @@ BlogPost.propTypes = {
 export default BlogPost;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query BlogPostByID($id: String!, $language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html

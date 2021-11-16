@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import logo from "../img/logocard.svg";
 import facebook from "../img/social/facebook.svg";
 import instagram from "../img/social/instagram.svg";
 import twitter from "../img/social/twitter.svg";
 import vimeo from "../img/social/vimeo.svg";
+import { Link, Trans } from "gatsby-plugin-react-i18next";
 
 const Footer = class extends React.Component {
   render() {
@@ -26,7 +26,7 @@ const Footer = class extends React.Component {
                   <ul className="menu-list">
                     <li>
                       <Link to="/" className="navbar-item">
-                        Strona Główna
+                        <Trans>Home page</Trans>
                       </Link>
                     </li>
                     {/* <li>
@@ -52,12 +52,12 @@ const Footer = class extends React.Component {
                   <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/blog">
-                        Historie na blogu
+                        <Trans>Blog stories</Trans>
                       </Link>
                     </li>
                     <li>
                       <Link className="navbar-item" to="/contact">
-                        Kontakt
+                        <Trans>Contact</Trans>
                       </Link>
                     </li>
                   </ul>
@@ -81,3 +81,17 @@ const Footer = class extends React.Component {
 };
 
 export default Footer;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
