@@ -1,7 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import { Link, Trans } from "gatsby-plugin-react-i18next";
 
 class TagRoute extends React.Component {
   render() {
@@ -16,8 +17,6 @@ class TagRoute extends React.Component {
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
-    const tagHeader = `${totalCount} posty/ów otagowanych z “${tag}”`
-
     return (
       <Layout>
         <section className="section">
@@ -28,10 +27,15 @@ class TagRoute extends React.Component {
                 className="column is-10 is-offset-1"
                 style={{ marginBottom: '6rem' }}
               >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
+                <h3 className="title is-size-4 is-bold-light">
+                  <Trans
+                    i18nKey="TagHeader"
+                    values={{ totalCount, tag }}
+                  />
+                </h3>
                 <ul className="taglist">{postLinks}</ul>
                 <p>
-                  <Link to="/tags/">Zobacz wszystkie tagi</Link>
+                  <Link to="/tags/"><Trans>View all tags</Trans></Link>
                 </p>
               </div>
             </div>
@@ -45,7 +49,16 @@ class TagRoute extends React.Component {
 export default TagRoute
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String) {
+  query TagPage($tag: String, $language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     site {
       siteMetadata {
         title

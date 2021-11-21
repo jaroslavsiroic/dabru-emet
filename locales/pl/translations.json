@@ -8,5 +8,10 @@
   "Show more": "Pokarz więcej",
   "Read more": "Czytaj dalej",
   "Newest blog stories": "Najnowsze historie na blogu",
-  "Home page": "Strona główna"
+  "Home page": "Strona główna",
+  "Tags": "Tagi",
+  "View all tags": "Zobacz wszystkie tagi",
+  "TagHeader": "{{totalCount}} posty/ów otagowanych z “{{tag}}”",
+  "PAGE NOT FOUND": "STRONA INTERNETOWA JEST NIEDOSTĘPNA",
+  "Not Found Description": "Ten komunikat oznacza, że nie można znaleźć ani załadować strony, którą próbujesz otworzyć"
 }

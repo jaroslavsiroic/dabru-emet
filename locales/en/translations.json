@@ -8,5 +8,10 @@
   "Show more": "Show more",
   "Read more": "Read more",
   "Newest blog stories": "Newest blog stories",
-  "Home page": "Home page"
+  "Home page": "Home page",
+  "Tags": "Tags",
+  "View all tags": "View all tags",
+  "TagHeader": "{{totalCount}} post(s) tagged with “{{tag}}”",
+  "PAGE NOT FOUND": "PAGE NOT FOUND",
+  "Not Found Description": "This means that page you are trying to open cannot be found or loaded"
 }

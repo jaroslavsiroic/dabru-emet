@@ -6,7 +6,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import { FacebookProvider, Comments } from "react-facebook";
-import { Link } from "gatsby-plugin-react-i18next";
+import { Link, Trans } from "gatsby-plugin-react-i18next";
 
 const isBrowser = () => typeof window !== "undefined";
 
@@ -35,7 +35,7 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tagi</h4>
+                <h4><Trans>Tags</Trans></h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>

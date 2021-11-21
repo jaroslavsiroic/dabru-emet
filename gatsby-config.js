@@ -66,8 +66,12 @@ module.exports = {
             languages: ["pl", "en"],
           },
           {
-            matchPath: "/blog/:uid",
-            excludeLanguages: ['en']
+            matchPath: "/blog/",
+            languages: ["pl", "en"],
+          },
+          {
+            matchPath: "/blog",
+            languages: ["pl", "en"],
           },
         ],
       },
