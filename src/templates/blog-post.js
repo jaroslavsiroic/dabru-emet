@@ -18,7 +18,7 @@ const remarkBox = `<!-- Remarkbox - Your readers want to communicate with you --
 </div>
 <script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
 <script>
-  var rb_owner_key = "e927f077-8ce4-11ec-a3d0-b1c8c4ae987e";
+  var rb_owner_key = "a27913be-8cec-11ec-a3d0-b1c8c4ae987e";
   var thread_uri = window.location.href;
   var thread_title = window.document.title;
   var thread_fragment = window.location.hash;
