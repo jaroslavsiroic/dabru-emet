@@ -1,5 +1,5 @@
 import React from "react";
-
+import { graphql } from "gatsby";
 import logo from "../img/logocard.svg";
 import facebook from "../img/social/facebook.svg";
 import instagram from "../img/social/instagram.svg";
@@ -84,7 +84,7 @@ export default Footer;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns

@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+import Layout from "../../components/Layout";
+import BlogRoll from "../../components/BlogRoll";
 import { Trans } from "gatsby-plugin-react-i18next";
 
 export default class BlogIndexPage extends React.Component {
@@ -24,9 +25,7 @@ export default class BlogIndexPage extends React.Component {
               flexDirection: "column",
             }}
           >
-            <h1
-              className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text"
-            >
+            <h1 className="has-text-weight-bold is-size-4-mobile is-size-3-tablet is-size-3-widescreen main-heading-text">
               <Trans>Blog stories</Trans>
             </h1>
           </div>
@@ -39,13 +38,13 @@ export default class BlogIndexPage extends React.Component {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 }
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
