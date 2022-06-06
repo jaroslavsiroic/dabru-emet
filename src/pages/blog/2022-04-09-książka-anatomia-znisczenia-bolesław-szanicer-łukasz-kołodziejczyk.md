@@ -6,4 +6,6 @@ description: |
   Dostępna do sprzedaży książka pt. "Anatomia zniszczenia"
 featuredimage: /img/277910114_438664668028815_7473645139533430680_n-3-.jpg
 ---
+![](/img/277894113_1171090550362949_4873996257856995004_n-3-.jpg)
+
 Szanowni Państwo, Informujemy że, od dziś książka  „Anatomia Zniszczenia” jest oficjalnie dostępna.  Można ją zakupić  bezpośrednio  w siedzibie fundacji „Gęsia”, przy ul. Gibalskiego 21, w piątki od 10:00 do 15:00, w cenie 26 złotych, lub zamawiając  drogą internetową (doliczając koszty przesyłki).  Zamówienia można składać w  wiadomości  prywatnej do  autorów książki.
