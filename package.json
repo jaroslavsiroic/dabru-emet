@@ -31,9 +31,9 @@
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-facebook": "^8.1.4",
     "react-helmet": "^6.0.0",
     "react-i18next": "^11.15.4",
+    "react-remarkbox": "^0.3.0",
     "uuid": "^8.3.2"
   },
   "keywords": [
