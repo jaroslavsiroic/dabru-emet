@@ -64,7 +64,9 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
   useEffect(() => {
-    document.getElementById("comment-section").innerHTML = remarkBox;
+    setTimeout(() => {
+      document.getElementById("comment-section").innerHTML = remarkBox;
+    }, 1000);
     console.log("Effect took place");
   }, []);
   return (
