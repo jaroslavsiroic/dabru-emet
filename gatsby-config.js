@@ -95,6 +95,8 @@ module.exports = {
               maxWidth: 2048,
             },
           },
+          "gatsby-remark-embed-video",
+          "gatsby-remark-responsive-iframe",
           {
             resolve: "gatsby-remark-copy-linked-files",
             options: {

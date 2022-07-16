@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
+import { Comments, FacebookProvider } from "react-facebook";
 import Content, { HTMLContent } from "../components/Content";
-import { FacebookProvider, Comments } from "react-facebook";
 import { Link, Trans } from "gatsby-plugin-react-i18next";
+import React, { useEffect } from "react";
+
+import { Helmet } from "react-helmet";
+import Layout from "../components/Layout";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import { kebabCase } from "lodash";
 
 const isBrowser = () => typeof window !== "undefined";
 
@@ -62,7 +63,10 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-
+  useEffect(() => {
+    document.getElementById("comment-section").innerHTML = remarkBox;
+    console.log("Effect took place");
+  }, []);
   return (
     <section className="section">
       {helmet || ""}
@@ -92,7 +96,7 @@ export const BlogPostTemplate = ({
             {/* <FacebookProvider appId="297707888605205">
               <Comments style={{ width: "100%" }} href={isBrowser() && window.location.href} />
             </FacebookProvider> */}
-            <div dangerouslySetInnerHTML={{ __html: remarkBox }} />
+            <div id="comment-section" />
           </div>
         </div>
       </div>

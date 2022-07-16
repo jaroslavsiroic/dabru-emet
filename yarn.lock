@@ -7727,6 +7727,15 @@ gatsby-remark-copy-linked-files@^5.7.0:
     probe-image-size "^6.0.0"
     unist-util-visit "^2.0.3"
 
+gatsby-remark-embed-video@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.2.1.tgz#167782a862f99c8d2f0ae988d5519466e75f9829"
+  integrity sha512-VVrcoNcLtWH4Ffqs2Qc2me9Ph+p8iXi9kMbX1OLFLY3JMtk5+lIOUGs0CutWsWKndj2W6PpfkwdFZyuknL5kjQ==
+  dependencies:
+    get-video-id "^3.6.4"
+    remark-burger "^1.0.1"
+    unist-util-visit "^2.0.3"
+
 gatsby-remark-images@^6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.7.0.tgz#53fc682a1758c4f9860be98c8b977601c5fb654a"
@@ -7754,6 +7763,17 @@ gatsby-remark-relative-images@^2.0.2:
     lodash "4.17.20"
     traverse "0.6.6"
     unist-util-select "3.0.1"
+
+gatsby-remark-responsive-iframe@^5.18.0:
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-5.18.0.tgz#53962f2ec98f9911c4fb395df0480f114c90f2fe"
+  integrity sha512-2oIHQMj830XhabTH3epPDCqB83zyD1qjvMN/46nytW7SJP8sRLoQkK+LiHj0jmjzjxEW1YSn3yX1uzCaijjQtg==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    cheerio "^1.0.0-rc.10"
+    common-tags "^1.8.2"
+    lodash "^4.17.21"
+    unist-util-visit "^2.0.3"
 
 gatsby-sharp@^0.1.0:
   version "0.1.0"
@@ -8136,6 +8156,11 @@ get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
+
+get-video-id@^3.6.4:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.6.4.tgz#86a92fd72ba9df637c568d9eb1245dbddb779c2f"
+  integrity sha512-BKaS+0wu4FW3nodJt/VcvOmPpOx7/F/qV7MPi4F3NgqVYehKJRwX+/oUA5alPEfEX9h3i/1tAGEbSpsNNbXA1Q==
 
 get-window@^1.1.1:
   version "1.1.2"
@@ -14705,6 +14730,11 @@ relateurl@^0.2.7:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+remark-burger@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/remark-burger/-/remark-burger-1.0.1.tgz#cda57d4bc1e952ae86b2407fbcf36492ab352106"
+  integrity sha512-F91SyEzat4hBkWsWElHIvMcCQuWoSeZXTuR4DmLvhUIjYkzzVLaX6GRxhkiDrZb/9asvTrYzwEr9HvxN1tqs9Q==
 
 remark-footnotes@^3.0.0:
   version "3.0.0"
