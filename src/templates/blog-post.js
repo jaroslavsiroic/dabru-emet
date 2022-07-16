@@ -49,14 +49,14 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-            <Remarkbox
+            {/* <Remarkbox
               style={{
                 width: "100%",
               }}
               remarkboxKey={"a27913be-8cec-11ec-a3d0-b1c8c4ae987e"}
               threadTitle={title}
               threadUri={url}
-            />
+            /> */}
             <div id="comment-section" />
           </div>
         </div>
